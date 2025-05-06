@@ -1,8 +1,13 @@
+"use client";
+
+import { Hero } from "@/components/hero";
+import { Navbar } from "@/components/navbar";
+
 export default function Home() {
   return (
-    <main className='flex-center flex-col gap-3 p-6 '>
-      <h1 className='text-5xl'>Hello, Recruiter</h1>
-      <p>Welcome to my porfolio</p>
+    <main className="mx-auto flex flex-col gap-3 p-5">
+      <Navbar />
+      <Hero />
     </main>
-  )
+  );
 }
