@@ -3,7 +3,9 @@
 @theme {
     --color-background-100: #0a0a0a;
     --color-foreground-100: #ededed;
-    --color-accent-100: #833bed;
+    /* --color-accent-100: #833bed; */
+    --color-accent-100: #10e956;
+    --color-lightaccent-100: #8AFCB0;
 }
 
 @layer components {
@@ -23,4 +25,5 @@ body {
   background: var(--color-background-100);
   color: var(--color-foreground-100);
   font-family: 'Eurostile';
+  min-height: 100vh;
 }
