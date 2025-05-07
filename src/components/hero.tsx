@@ -2,7 +2,6 @@
 
 import ComputerAnimation from '../data/computer-lottie.json'
 import dynamic from 'next/dynamic'
-import { MagicButton } from './ui/magic-button'
 import { motion } from 'motion/react'
 import { BackgroundBeamsWithCollision } from './ui/background-beams-with-collision'
 
@@ -11,6 +10,7 @@ const transition = {
   damping: 10,
   stiffness: 30,
   ease: 'easeInOut',
+  delay: 4.1,
 }
 
 const infoVariants = {
