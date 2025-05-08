@@ -18,12 +18,14 @@
 
 @font-face {
   font-family: "Eurostile";
-  src: url("/fonts/eurostile.ttf");
+  src: url("/fonts/eurostile.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
   background: var(--color-background-100);
   color: var(--color-foreground-100);
-  font-family: 'Eurostile';
+  font-family: 'Eurostile', sans-serif;
   min-height: 100vh;
 }
