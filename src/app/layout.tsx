@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import { EntranceAnimation } from '@/components/entrance-animation'
 import SmoothCursor from '@/components/ui/smooth-cursor'
+import { eurostile } from '../lib/fonts'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -25,9 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased cursor-none`}
-      >
+      <body className={`${eurostile.variable} antialiased cursor-none`}>
         <EntranceAnimation />
         <SmoothCursor />
         {children}

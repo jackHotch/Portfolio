@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+    --font-eurostile: 'Eurostile', sans-serif;
     --color-background-100: #0a0a0a;
     --color-foreground-100: #ededed;
     /* --color-accent-100: #833bed; */
@@ -26,6 +27,6 @@
 body {
   background: var(--color-background-100);
   color: var(--color-foreground-100);
-  font-family: 'Eurostile', sans-serif;
+  font-family: var(--font-eurostile);
   min-height: 100vh;
 }
