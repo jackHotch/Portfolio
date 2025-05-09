@@ -3,6 +3,7 @@
 import { Hero } from '@/components/hero'
 import { Logo } from '@/components/logo'
 import { Navbar } from '@/components/navbar'
+import { Skills } from '@/components/skills'
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Logo />
       <Navbar />
       <Hero />
+      <Skills />
     </main>
   )
 }

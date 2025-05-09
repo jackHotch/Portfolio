@@ -42,7 +42,7 @@ export const Hero = () => {
   }
 
   return (
-    <BackgroundBeamsWithCollision>
+    <BackgroundBeamsWithCollision className='border-b-1 border-accent-100'>
       <div className='lg:mt-10 mt-20 lg:px-20 flex w-full flex-col-reverse flex-wrap items-center justify-center lg:flex-row lg:justify-between gap-20'>
         <motion.div
           variants={infoVariants}
