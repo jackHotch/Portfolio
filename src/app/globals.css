@@ -24,6 +24,10 @@
   font-style: normal;
 }
 
+* {
+  cursor: none;
+}
+
 body {
   background: var(--color-background-100);
   color: var(--color-foreground-100);

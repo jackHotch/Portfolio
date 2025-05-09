@@ -25,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en'>
-      <body className={`${eurostile.variable} antialiased cursor-none`}>
+    <html lang="en">
+      <body className={`${eurostile.variable} cursor-none antialiased`}>
         <EntranceAnimation />
         <SmoothCursor />
         {children}

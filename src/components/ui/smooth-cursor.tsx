@@ -55,16 +55,8 @@ export default function SmoothCursor() {
         return start + (end - start) * factor
       }
 
-      dotPosition.current.x = lerp(
-        dotPosition.current.x,
-        mousePosition.current.x,
-        DOT_SMOOTHNESS
-      )
-      dotPosition.current.y = lerp(
-        dotPosition.current.y,
-        mousePosition.current.y,
-        DOT_SMOOTHNESS
-      )
+      dotPosition.current.x = mousePosition.current.x
+      dotPosition.current.y = mousePosition.current.y
 
       borderDotPosition.current.x = lerp(
         borderDotPosition.current.x,
@@ -79,7 +71,10 @@ export default function SmoothCursor() {
 
       setRenderPos({
         dot: { x: dotPosition.current.x, y: dotPosition.current.y },
-        border: { x: borderDotPosition.current.x, y: borderDotPosition.current.y },
+        border: {
+          x: borderDotPosition.current.x,
+          y: borderDotPosition.current.y,
+        },
       })
 
       requestAnimationFrame(animate)
@@ -107,23 +102,26 @@ export default function SmoothCursor() {
 
   return (
     windowHovering && (
-      <div className='pointer-events-none fixed inset-0 z-50'>
+      <div className="pointer-events-none fixed inset-0 z-50">
         <div
-          className='absolute rounded-full bg-accent-100 '
+          className="bg-accent-100 absolute rounded-full"
           style={{
-            width: '8px',
-            height: '8px',
+            width: isHovering ? '12px' : '8px',
+            height: isHovering ? '12px' : '8px',
             transform: 'translate(-50%, -50%)',
             left: `${renderPos.dot.x}px`,
             top: `${renderPos.dot.y}px`,
+            transition: 'width 0.3s, height 0.3s',
           }}
         />
 
         <div
-          className='absolute rounded-full border border-accent-100 '
+          className="border-accent-100 absolute rounded-full border"
           style={{
-            width: isHovering ? '44px' : '28px',
-            height: isHovering ? '44px' : '28px',
+            width: isHovering ? '12px' : '28px',
+            height: isHovering ? '12px' : '28px',
+            // width: '28px',
+            // height: '28px',
             transform: 'translate(-50%, -50%)',
             left: `${renderPos.border.x}px`,
             top: `${renderPos.border.y}px`,
